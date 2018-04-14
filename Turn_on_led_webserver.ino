@@ -14,14 +14,14 @@ void handleLEDon() {
   
   Serial.println("LED on page");
   digitalWrite(led, LOW); //LED is connected in reverse
-  server.send(200, "text/html", "LED is ON"); //Send ADC value only to client ajax request
+  //server.send(200, "text/html", "LED is ON"); //Send ADC value only to client ajax request
 }
  
 void handleLEDoff() { 
  
   Serial.println("LED off page");
   digitalWrite(led, HIGH); //LED off
-  server.send(200, "text/html", "LED is OFF"); //Send ADC value only to client ajax request
+  //server.send(200, "text/html", "LED is OFF"); //Send ADC value only to client ajax request
 }
 
 void handleRoot() {
@@ -39,8 +39,8 @@ void handleRoot() {
     "</style>"
   "</head>"
   "<body>"
-    "<a href=\"ledOn\">On</a><br>"
-    "<a href=\"ledOff\">Off</a>"
+    "<h1><a href=\"ledOn\">On</a></h1><br>"
+    "<h1><a href=\"ledOff\">Off</a></h1>"
   "</body>"
 "</html>"
   );
